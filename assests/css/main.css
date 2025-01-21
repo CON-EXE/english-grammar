@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border-style: none;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+.container {
+    width: min(100% - 30px, 960px);
+    margin-inline: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.grid-center {
+    display: grid;
+    place-items: center;
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+/*--------------------*/
+/*Header and Footer   */
+/*--------------------*/
+
+.hero-banner {
+    height: 100dvh;
+    background: #fff url(../img/canyon.jpg) center center / cover no-repeat;
+    overflow: hidden;
+}
+
+header {
+    margin-top: 10px;
+    height: 50px;
+    padding: 0 25px;
+    border-radius: 50px;
+    border: 1px solid rgb(255 255 255 / 8%);
+    background-color: rgb(255 255 255 / 10%);
+    backdrop-filter: blur(20px) saturate(120%) ;
+
+    h1, p {
+        line-height: 50px;
+        color: #fff;
+    }
+
+    h1 {
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 17px;
+        font-weight: 600;
+    }
+}
+
+nav {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    line-height: 50px;
+
+    a {
+        font-size: 17px;
+        font-weight: 500;
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+li + li {
+    margin-left: 15px;
+}
+
+.hero-content {
+    height: calc(100dvh - 70px - 70px);
+
+    & > div {
+        text-align: center;
+        color: #fff;
+        text-wrap: balance;
+
+        h2 {
+            line-height: 1;
+            font-size: 100px;
+            font-weight: 900;
+            letter-spacing: 0.2px;
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: 500;
+        }
+    }
+}
+
+footer {
+    height: 100px;
+    background-color: #2e2d3a;
+    text-align: center;
+
+    p {
+        line-height: 80px;
+        font-size: 18px;
+        font-weight: 400;
+        color: rgb(255 255 255 / 75%);
+    }
+}
